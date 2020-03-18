@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200318 16:20:18.650" generator="Robot 3.1.1 (Python 2.7.17 on linux2)">
+<suite source="/home/rdt/TEIgnatiusRaditya/Number 1/APITest.robot" id="s1" name="APITest">
+<test id="s1-t1" name="Point B Test Case">
+<kw name="Post An Item">
+<arguments>
+<arg>{"title" : "recommendation" , "body" : "motorcycle" , "userId" : 12}</arg>
+</arguments>
+<kw name="Post" library="REST">
+<tags>
+<tag>http</tag>
+</tags>
+<doc>*Sends a POST request to the endpoint.*</doc>
+<arguments>
+<arg>https://jsonplaceholder.typicode.com/posts</arg>
+<arg>${user_input}</arg>
+</arguments>
+<status status="PASS" endtime="20200318 16:20:29.772" starttime="20200318 16:20:18.916"></status>
+</kw>
+<status status="PASS" endtime="20200318 16:20:29.773" starttime="20200318 16:20:18.916"></status>
+</kw>
+<kw name="Verify Post Status">
+<kw name="Integer" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON integer.*</doc>
+<arguments>
+<arg>response status</arg>
+<arg>201</arg>
+</arguments>
+<status status="PASS" endtime="20200318 16:20:29.774" starttime="20200318 16:20:29.773"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body title</arg>
+<arg>recommendation</arg>
+</arguments>
+<status status="PASS" endtime="20200318 16:20:29.775" starttime="20200318 16:20:29.775"></status>
+</kw>
+<kw name="String" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON string.*</doc>
+<arguments>
+<arg>response body body</arg>
+<arg>motorcycle</arg>
+</arguments>
+<status status="PASS" endtime="20200318 16:20:29.776" starttime="20200318 16:20:29.775"></status>
+</kw>
+<kw name="Integer" library="REST">
+<tags>
+<tag>assertions</tag>
+</tags>
+<doc>*Asserts the field as JSON integer.*</doc>
+<arguments>
+<arg>response body userId</arg>
+<arg>12</arg>
+</arguments>
+<status status="PASS" endtime="20200318 16:20:29.777" starttime="20200318 16:20:29.776"></status>
+</kw>
+<status status="PASS" endtime="20200318 16:20:29.777" starttime="20200318 16:20:29.773"></status>
+</kw>
+<status status="PASS" endtime="20200318 16:20:29.777" critical="yes" starttime="20200318 16:20:18.915"></status>
+</test>
+<status status="PASS" endtime="20200318 16:20:29.778" starttime="20200318 16:20:18.650"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="APITest" pass="1">APITest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200318 16:20:18.668" level="ERROR">Error in file '/home/rdt/TEIgnatiusRaditya/Number 1/resources.robot': Importing test library 'ExtendedRequestLibrary' failed: ImportError: No module named ExtendedRequestLibrary
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /usr/local/bin
+  /usr/lib/python2.7
+  /usr/lib/python2.7/plat-x86_64-linux-gnu
+  /usr/lib/python2.7/lib-tk
+  /usr/lib/python2.7/lib-old
+  /usr/lib/python2.7/lib-dynload
+  /home/rdt/.local/lib/python2.7/site-packages
+  /usr/local/lib/python2.7/dist-packages
+  /usr/lib/python2.7/dist-packages</msg>
+</errors>
+</robot>

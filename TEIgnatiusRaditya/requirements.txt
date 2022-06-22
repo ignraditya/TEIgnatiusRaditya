@@ -13,7 +13,7 @@ BeautifulSoup4==4.4.1
 xvfbwrapper==0.2.9
 timeout-decorator==0.4.1
 robotbackgroundlogger==1.2
-numpy==1.14.5
+numpy==1.22.0
 pygments==2.4.2
 opencv-python==4.1.0.25
 httplib2
